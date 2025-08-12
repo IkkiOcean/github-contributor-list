@@ -6,11 +6,9 @@ import re
 from datetime import datetime
 import pandas as pd
 import os
-from dotenv import load_dotenv
 
-load_dotenv()  # load variables from .env
 
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GITHUB_TOKEN = st.secrets.get("GITHUB_TOKEN")
 
 if not GITHUB_TOKEN:
     st.error("GitHub token not found! Please add it to your .env file.")
