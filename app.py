@@ -5,7 +5,6 @@ import io
 import re
 from datetime import datetime
 import pandas as pd
-import os
 
 
 GITHUB_TOKEN = st.secrets.get("GITHUB_TOKEN")
